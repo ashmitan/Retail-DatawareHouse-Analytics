@@ -1,0 +1,7 @@
+SOR_ID,SOR_Name,SOR_Description,SOR_Type,SOR_DBMS,SOR_DBName,SOR_DBSchema,SOR_FileType,SOR_Filename,SOR_AppName,SOR_AppModule
+1,neu_hr,HumanResource Schema from AdventureWorks2017,Database System,Oracle,AW2017NEU_HR,HumanResources,ZIP,aw2017neu_hr_oracle.zip,,
+2,neu_person,Person Schema from AdventureWorks2017,Database System,Oracle,AW2017NEU_PERSON,Persons,ZIP,aw2017neu_person_oracle.zip,,
+3,neu_sales,Sales Schema from AdventureWorks2017,Database System,SQL Server,AW2017NEU_SALES,Sales,BACKUP,aw2017neu_sales_postgresql.backup,,
+4,neu_production,Production Schema from AdventureWorks2017,Database System,SQL Server,AW2017NEU_PRODUCTION,Production,BAK,aw2017neu_production_sqlserver.bak,,
+5,neu_purchasing,Purchasing Schema from AdventureWorks2017,Database System,MySQL,AW2017NEU_PURCHASING,Purchasing,SQL,aw2017neu_purchasing_mysql.sql,,
+6,DimDate,Input seed for DimDate,csv,csv,Input seed for DimDate,Inputs,CSV,DimDate_input.csv,,

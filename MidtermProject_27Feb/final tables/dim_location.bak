@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:AdventureWorks2017|||select Production.Location.LocationID,
+	Production.Location.Name,
+	Production.Location.CostRate,
+	Production.Location.Availability,
+	Production.Location.ModifiedDate 
+from Production.Location</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:AdventureWorks2017
+Query=select Production.Location.L...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="LocationID" source="File: aka:AdventureWorks2017|||select Production.Location.LocationID,&#xA;	Production.Location.Name,&#xA;	Production.Location.CostRate,&#xA;	Production.Location.Availability,&#xA;	Production.Location.ModifiedDate &#xA;from Production.Location" type="Int16" />
+            <Field name="Name" size="50" source="File: aka:AdventureWorks2017|||select Production.Location.LocationID,&#xA;	Production.Location.Name,&#xA;	Production.Location.CostRate,&#xA;	Production.Location.Availability,&#xA;	Production.Location.ModifiedDate &#xA;from Production.Location" type="V_WString" />
+            <Field name="CostRate" scale="4" size="12" source="File: aka:AdventureWorks2017|||select Production.Location.LocationID,&#xA;	Production.Location.Name,&#xA;	Production.Location.CostRate,&#xA;	Production.Location.Availability,&#xA;	Production.Location.ModifiedDate &#xA;from Production.Location" type="FixedDecimal" />
+            <Field name="Availability" scale="2" size="10" source="File: aka:AdventureWorks2017|||select Production.Location.LocationID,&#xA;	Production.Location.Name,&#xA;	Production.Location.CostRate,&#xA;	Production.Location.Availability,&#xA;	Production.Location.ModifiedDate &#xA;from Production.Location" type="FixedDecimal" />
+            <Field name="ModifiedDate" source="File: aka:AdventureWorks2017|||select Production.Location.LocationID,&#xA;	Production.Location.Name,&#xA;	Production.Location.CostRate,&#xA;	Production.Location.Availability,&#xA;	Production.Location.ModifiedDate &#xA;from Production.Location" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="150" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>location_durable_sk</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="234" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_JOB_ID" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="DI_CREATED_DATE" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="DI_MODIFIED_DATE" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DI_JOB_ID = [Engine.WorkflowFileName]
+DI_CREATED_DATE = DateTimeNow()
+DI_MODIFIE...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="366" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="location_durable_sk" selected="True" />
+            <SelectField field="LocationID" selected="True" />
+            <SelectField field="Name" selected="True" />
+            <SelectField field="CostRate" selected="True" />
+            <SelectField field="Availability" selected="True" />
+            <SelectField field="ModifiedDate" selected="True" />
+            <SelectField field="DI_JOB_ID" selected="True" />
+            <SelectField field="DI_CREATED_DATE" selected="True" />
+            <SelectField field="DI_MODIFIED_DATE" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="474" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=AdventureWorks_Purchasing;UID=root;PWD=__EncPwd1__|||dim_location</File>
+          <Passwords>43D92B656D0C8CC86D6FB46E2DC63009AFC6F4865</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <AppendMap>
+              <AppendMapping mode="Custom">
+                <Field Source="LocationID" Dest="LocationID" />
+                <Field Source="CostRate" Dest="CostRate" />
+                <Field Source="Availability" Dest="Availability" />
+                <Field Source="ModifiedDate" Dest="ModifiedDate" />
+                <Field Source="DI_JOB_ID" Dest="DI_Job_id" />
+                <Field Source="DI_CREATED_DATE" Dest="DI_Created_Date" />
+                <Field Source="DI_MODIFIED_DATE" Dest="DI_Modified_Date" />
+              </AppendMapping>
+            </AppendMap>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Append</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=AdventureWorks_Purchasing
+Query=dim_location</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>dim_location</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:AdventureWorks2017|||select Production.ProductInventory.ProductID,
+	Production.ProductInventory.Shelf,
+	Production.ProductInventory.Bin,
+	Production.ProductInventory.Quantity,
+	Production.ProductInventory.ModifiedDate 
+from Production.ProductInventory</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:AdventureWorks2017
+Query=select Production.ProductInv...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ProductID" source="File: aka:AdventureWorks2017|||select Production.ProductInventory.ProductID,&#xA;	Production.ProductInventory.Shelf,&#xA;	Production.ProductInventory.Bin,&#xA;	Production.ProductInventory.Quantity,&#xA;	Production.ProductInventory.ModifiedDate &#xA;from Production.ProductInventory" type="Int32" />
+            <Field name="Shelf" size="10" source="File: aka:AdventureWorks2017|||select Production.ProductInventory.ProductID,&#xA;	Production.ProductInventory.Shelf,&#xA;	Production.ProductInventory.Bin,&#xA;	Production.ProductInventory.Quantity,&#xA;	Production.ProductInventory.ModifiedDate &#xA;from Production.ProductInventory" type="V_WString" />
+            <Field name="Bin" source="File: aka:AdventureWorks2017|||select Production.ProductInventory.ProductID,&#xA;	Production.ProductInventory.Shelf,&#xA;	Production.ProductInventory.Bin,&#xA;	Production.ProductInventory.Quantity,&#xA;	Production.ProductInventory.ModifiedDate &#xA;from Production.ProductInventory" type="Int16" />
+            <Field name="Quantity" source="File: aka:AdventureWorks2017|||select Production.ProductInventory.ProductID,&#xA;	Production.ProductInventory.Shelf,&#xA;	Production.ProductInventory.Bin,&#xA;	Production.ProductInventory.Quantity,&#xA;	Production.ProductInventory.ModifiedDate &#xA;from Production.ProductInventory" type="Int16" />
+            <Field name="ModifiedDate" source="File: aka:AdventureWorks2017|||select Production.ProductInventory.ProductID,&#xA;	Production.ProductInventory.Shelf,&#xA;	Production.ProductInventory.Bin,&#xA;	Production.ProductInventory.Quantity,&#xA;	Production.ProductInventory.ModifiedDate &#xA;from Production.ProductInventory" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="162" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>productinventory_durable_sk</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="246" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_JOB_ID" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="DI_CREATED_DATE" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="DI_MODIFIED_DATE" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DI_JOB_ID = [Engine.WorkflowFileName]
+DI_CREATED_DATE = DateTimeNow()
+DI_MODIFIE...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="378" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="productinventory_durable_sk" selected="True" />
+            <SelectField field="ProductID" selected="True" />
+            <SelectField field="Shelf" selected="True" />
+            <SelectField field="Bin" selected="True" />
+            <SelectField field="Quantity" selected="True" />
+            <SelectField field="ModifiedDate" selected="True" />
+            <SelectField field="DI_JOB_ID" selected="True" />
+            <SelectField field="DI_CREATED_DATE" selected="True" />
+            <SelectField field="DI_MODIFIED_DATE" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="486" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=AdventureWorks_Purchasing;UID=root;PWD=__EncPwd1__|||dim_productinventory</File>
+          <Passwords>43D92B656D0C8CC86D6FB46E2DC63009AFC6F4865</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <AppendMap>
+              <AppendMapping mode="Custom">
+                <Field Source="ProductID" Dest="ProductID" />
+                <Field Source="Shelf" Dest="Shelf" />
+                <Field Source="Bin" Dest="Bin" />
+                <Field Source="Quantity" Dest="Quantity" />
+                <Field Source="ModifiedDate" Dest="ModifiedDate" />
+                <Field Source="DI_JOB_ID" Dest="DI_JobID" />
+                <Field Source="DI_CREATED_DATE" Dest="DI_CreatedDate" />
+                <Field Source="DI_MODIFIED_DATE" Dest="DI_ModifiedDate" />
+              </AppendMapping>
+            </AppendMap>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Append</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=AdventureWorks_Purchasing
+Query=dim_productinventory</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>dim_productinventory</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

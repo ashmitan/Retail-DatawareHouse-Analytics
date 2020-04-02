@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,
+	Production.WorkOrderRouting.ScheduledStartDate,
+	Production.WorkOrderRouting.ScheduledEndDate,
+	Production.WorkOrderRouting.ActualStartDate,
+	Production.WorkOrderRouting.ActualEndDate,
+	Production.WorkOrderRouting.ActualResourceHrs,
+	Production.WorkOrderRouting.PlannedCost,
+	Production.WorkOrderRouting.ActualCost 
+from Production.WorkOrderRouting</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:AdventureWorks2017
+Query=select Production.WorkOrderR...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="OperationSequence" source="File: aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,&#xA;	Production.WorkOrderRouting.ScheduledStartDate,&#xA;	Production.WorkOrderRouting.ScheduledEndDate,&#xA;	Production.WorkOrderRouting.ActualStartDate,&#xA;	Production.WorkOrderRouting.ActualEndDate,&#xA;	Production.WorkOrderRouting.ActualResourceHrs,&#xA;	Production.WorkOrderRouting.PlannedCost,&#xA;	Production.WorkOrderRouting.ActualCost &#xA;from Production.WorkOrderRouting" type="Int16" />
+            <Field name="ScheduledStartDate" source="File: aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,&#xA;	Production.WorkOrderRouting.ScheduledStartDate,&#xA;	Production.WorkOrderRouting.ScheduledEndDate,&#xA;	Production.WorkOrderRouting.ActualStartDate,&#xA;	Production.WorkOrderRouting.ActualEndDate,&#xA;	Production.WorkOrderRouting.ActualResourceHrs,&#xA;	Production.WorkOrderRouting.PlannedCost,&#xA;	Production.WorkOrderRouting.ActualCost &#xA;from Production.WorkOrderRouting" type="DateTime" />
+            <Field name="ScheduledEndDate" source="File: aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,&#xA;	Production.WorkOrderRouting.ScheduledStartDate,&#xA;	Production.WorkOrderRouting.ScheduledEndDate,&#xA;	Production.WorkOrderRouting.ActualStartDate,&#xA;	Production.WorkOrderRouting.ActualEndDate,&#xA;	Production.WorkOrderRouting.ActualResourceHrs,&#xA;	Production.WorkOrderRouting.PlannedCost,&#xA;	Production.WorkOrderRouting.ActualCost &#xA;from Production.WorkOrderRouting" type="DateTime" />
+            <Field name="ActualStartDate" source="File: aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,&#xA;	Production.WorkOrderRouting.ScheduledStartDate,&#xA;	Production.WorkOrderRouting.ScheduledEndDate,&#xA;	Production.WorkOrderRouting.ActualStartDate,&#xA;	Production.WorkOrderRouting.ActualEndDate,&#xA;	Production.WorkOrderRouting.ActualResourceHrs,&#xA;	Production.WorkOrderRouting.PlannedCost,&#xA;	Production.WorkOrderRouting.ActualCost &#xA;from Production.WorkOrderRouting" type="DateTime" />
+            <Field name="ActualEndDate" source="File: aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,&#xA;	Production.WorkOrderRouting.ScheduledStartDate,&#xA;	Production.WorkOrderRouting.ScheduledEndDate,&#xA;	Production.WorkOrderRouting.ActualStartDate,&#xA;	Production.WorkOrderRouting.ActualEndDate,&#xA;	Production.WorkOrderRouting.ActualResourceHrs,&#xA;	Production.WorkOrderRouting.PlannedCost,&#xA;	Production.WorkOrderRouting.ActualCost &#xA;from Production.WorkOrderRouting" type="DateTime" />
+            <Field name="ActualResourceHrs" scale="4" size="11" source="File: aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,&#xA;	Production.WorkOrderRouting.ScheduledStartDate,&#xA;	Production.WorkOrderRouting.ScheduledEndDate,&#xA;	Production.WorkOrderRouting.ActualStartDate,&#xA;	Production.WorkOrderRouting.ActualEndDate,&#xA;	Production.WorkOrderRouting.ActualResourceHrs,&#xA;	Production.WorkOrderRouting.PlannedCost,&#xA;	Production.WorkOrderRouting.ActualCost &#xA;from Production.WorkOrderRouting" type="FixedDecimal" />
+            <Field name="PlannedCost" scale="4" size="21" source="File: aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,&#xA;	Production.WorkOrderRouting.ScheduledStartDate,&#xA;	Production.WorkOrderRouting.ScheduledEndDate,&#xA;	Production.WorkOrderRouting.ActualStartDate,&#xA;	Production.WorkOrderRouting.ActualEndDate,&#xA;	Production.WorkOrderRouting.ActualResourceHrs,&#xA;	Production.WorkOrderRouting.PlannedCost,&#xA;	Production.WorkOrderRouting.ActualCost &#xA;from Production.WorkOrderRouting" type="FixedDecimal" />
+            <Field name="ActualCost" scale="4" size="21" source="File: aka:AdventureWorks2017|||select Production.WorkOrderRouting.OperationSequence,&#xA;	Production.WorkOrderRouting.ScheduledStartDate,&#xA;	Production.WorkOrderRouting.ScheduledEndDate,&#xA;	Production.WorkOrderRouting.ActualStartDate,&#xA;	Production.WorkOrderRouting.ActualEndDate,&#xA;	Production.WorkOrderRouting.ActualResourceHrs,&#xA;	Production.WorkOrderRouting.PlannedCost,&#xA;	Production.WorkOrderRouting.ActualCost &#xA;from Production.WorkOrderRouting" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="150" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>workorderrouting_durable_sk</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="246" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_JOB_ID" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="DI_CREATED_DATE" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="DI_MODIFIED_DATE" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DI_JOB_ID = [Engine.WorkflowFileName]
+DI_CREATED_DATE = DateTimeNow()
+DI_MODIFIE...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="390" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="workorderrouting_durable_sk" selected="True" />
+            <SelectField field="OperationSequence" selected="True" />
+            <SelectField field="ScheduledStartDate" selected="True" />
+            <SelectField field="ScheduledEndDate" selected="True" />
+            <SelectField field="ActualStartDate" selected="True" />
+            <SelectField field="ActualEndDate" selected="True" />
+            <SelectField field="ActualResourceHrs" selected="True" />
+            <SelectField field="PlannedCost" selected="True" />
+            <SelectField field="ActualCost" selected="True" />
+            <SelectField field="DI_JOB_ID" selected="True" />
+            <SelectField field="DI_CREATED_DATE" selected="True" />
+            <SelectField field="DI_MODIFIED_DATE" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="486" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=AdventureWorks_Purchasing;UID=root;PWD=__EncPwd1__|||fact_workorderrouting</File>
+          <Passwords>43D92B656D0C8CC86D6FB46E2DC63009AFC6F4865</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <AppendMap>
+              <AppendMapping mode="Custom">
+                <Field Source="OperationSequence" Dest="OperationSequence" />
+                <Field Source="ScheduledStartDate" Dest="ScheduledStartDate" />
+                <Field Source="ScheduledEndDate" Dest="ScheduledEndDate" />
+                <Field Source="ActualStartDate" Dest="ActualStartDate" />
+                <Field Source="ActualEndDate" Dest="ActualEndDate" />
+                <Field Source="ActualResourceHrs" Dest="ActualResourceHrs" />
+                <Field Source="PlannedCost" Dest="PlannedCost" />
+                <Field Source="ActualCost" Dest="ActualCost" />
+                <Field Source="DI_JOB_ID" Dest="DI_JOB_ID" />
+                <Field Source="DI_CREATED_DATE" Dest="DI_CREATED_DATE" />
+                <Field Source="DI_MODIFIED_DATE" Dest="DI_MODIFIED_DATE" />
+              </AppendMapping>
+            </AppendMap>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Append</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=AdventureWorks_Purchasing
+Query=fact_workorderrouting</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>fact_workorderrouting</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
